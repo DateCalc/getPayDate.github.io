@@ -1,0 +1,59 @@
+<p id="demo"></p>
+
+<script>
+var deadline = new Date();
+var cur = new Date();
+var jan = new Date(2016,11,28);
+var feb = new Date(2017,0,31);
+var mrt = new Date(2017,1,28);
+var apr = new Date(2017,2,29);
+var mei = new Date(2017,3,25);
+var jun = new Date(2017,4,30);
+var jul = new Date(2017,5,29);
+var aug = new Date(2017,6,31);
+var sep = new Date(2017,7,31);
+var okt = new Date(2017,8,28);
+var nov = new Date(2017,9,30);
+var dec = new Date(2017,10,28);
+if (cur <= dec) {
+var deadline = new Date(dec);
+}
+if (cur <= nov) {
+var deadline = new Date(nov);
+}
+if (cur <= okt) {
+var deadline = new Date(okt);
+}
+if (cur <= sep) {
+var deadline = new Date(sep);
+}
+if (cur <= aug) {
+var deadline = new Date(aug);
+}
+if (cur <= jul) {
+var deadline = new Date(jul);
+}
+if (cur <= jun) {
+var deadline = new Date(jun);
+}
+if (cur <= mei) {
+var deadline = new Date(mei);
+}
+if (cur <= apr) {
+var deadline = new Date(apr);
+}
+if (cur <= mrt) {
+var deadline = new Date(mrt);
+}
+if (cur <= feb) {
+var deadline = new Date(feb);
+}
+if (cur <= jan) {
+var deadline = new Date(jan);
+}
+var timeDiff = Math.abs(deadline.getTime() - cur.getTime());
+var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+var deadline_txt = deadline.toLocaleDateString("nl-NL");
+var t = "Graag mutaties inleveren voor: " + deadline_txt + "." + "Nog " + diffDays + " dagen.";
+document.getElementById("demo").innerHTML = t;
+</script>
